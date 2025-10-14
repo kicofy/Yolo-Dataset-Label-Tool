@@ -1,0 +1,14 @@
+{
+  "imageId": "a03efb90c46c499cac258ec45573737b.jpg",
+  "imageWidth": 512,
+  "imageHeight": 512,
+  "boxes": [
+    {
+      "classId": 0,
+      "x": 265.0,
+      "y": 261.0,
+      "width": 41.0,
+      "height": 41.0
+    }
+  ]
+}

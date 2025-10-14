@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YOLO Annotation Tool</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+  <script defer src="/static/app.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:,">
+  <meta name="color-scheme" content="light dark">
+  <style>
+    html, body { height: 100%; }
+  </style>
+  </head>
+<body>
+  <div class="topbar">
+    <div class="left">
+      <h1>YOLO Annotation Tool</h1>
+      <button id="btn-refresh" title="Refresh images">Refresh</button>
+    </div>
+    <div class="right">
+      <label class="upload-btn">
+        Upload Images
+        <input type="file" id="upload-images" multiple accept="image/*" />
+      </label>
+      <label class="upload-btn">
+        Upload ZIP
+        <input type="file" id="upload-zip" accept=".zip" />
+      </label>
+      <button id="btn-export">Export YOLO Dataset</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <aside class="sidebar left" id="thumbs"></aside>
+    <main class="main">
+      <div class="toolbar">
+        <div class="labels">
+          <select id="label-select"></select>
+          <input type="text" id="new-label-name" placeholder="New label name" />
+          <button id="btn-add-label">Add Label</button>
+        </div>
+      </div>
+
+      <div class="canvas-wrap">
+        <img id="image" alt="" />
+        <canvas id="canvas"></canvas>
+        <canvas id="overlay"></canvas>
+      </div>
+    </main>
+    <aside class="sidebar right">
+      <div class="box-list" id="box-list"></div>
+    </aside>
+  </div>
+
+  <template id="thumb-item">
+    <div class="thumb">
+      <img />
+      <canvas class="thumb-canvas"></canvas>
+    </div>
+  </template>
+
+</body>
+</html>
+
+
